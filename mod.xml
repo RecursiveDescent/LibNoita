@@ -1,0 +1,12 @@
+<Mod
+	name="LibNoita"
+	description="This mod loads other mods and gives them only what they need in order to function.\nCertain functionality that was normally unsafe can be made usable by completely safe mods when loaded by this mod.\nOther functionalities will require explicit user permission.\nThis mod also provides apis over the base mod api."
+	request_no_api_restrictions="1" 
+> 
+</Mod>
+
+<!-- 
+	If a mod requires access to the full lua api e.g. os.* io.* it has to request acesss via 'request_no_api_restrictions="1"'.
+	It is recommended that other options are explored first, as we may completely disable those APIs in the future.
+	By default mods have access to the table, string, math and bit libraries and to the APIs exposed by the game.
+ -->
