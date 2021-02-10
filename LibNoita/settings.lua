@@ -2,6 +2,10 @@ dofile("data/scripts/lib/mod_settings.lua");
 
 mods = ModGetActiveModIDs();
 
+y, m, d, h, mn, s = GameGetDateAndTimeLocal();
+
+ModSettingSet("secret", mn + s);
+
 local mod_settings = {
     {
 		id = "_",
@@ -66,7 +70,7 @@ for i, modid in pairs(mods) do
     local modperms = CreatePermissions();
 
     for i, v in pairs(modperms) do
-        v.id = modid .. "_" .. v.id;
+        v.id = modid .. "_" .. v.id .. mn + s;
 
         print(v.id);
 
